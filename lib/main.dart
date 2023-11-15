@@ -29,8 +29,7 @@ class MyHomePage extends StatelessWidget {
               // Display the list of posts as cards
               Expanded(
                 child: Container(
-                  height: 100,
-                  width: 1500, // Set the desired width here
+                  width: 1000, // Set the desired width here
                   child: FutureBuilder(
                     future: fetchPosts(),
                     builder: (context, snapshot) {
@@ -48,7 +47,7 @@ class MyHomePage extends StatelessWidget {
                             final post = posts[index];
 
                             // Remove HTML tags
-                            String cleanExcerpt = post['excerpt']['rendered']
+                            String cleanExcerpt = post['content']['rendered']
                                 .replaceAll(
                                     RegExp(r'<[^>]*>'), '') // Remove HTML tags
                                 .replaceAll(
@@ -57,7 +56,7 @@ class MyHomePage extends StatelessWidget {
 
                             // Limit the number of lines
                             final int maxLines =
-                                5; // Set the desired number of lines
+                                10; // Set the desired number of lines
                             String limitedContent =
                                 _limitLines(cleanExcerpt, maxLines);
 
