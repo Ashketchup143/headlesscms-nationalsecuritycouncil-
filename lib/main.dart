@@ -66,7 +66,7 @@ class MyHomePage extends StatelessWidget {
                                 title: Text(
                                   post['title']['rendered'],
                                   style: TextStyle(
-                                    fontSize: 18.0,
+                                    fontSize: 25.0,
                                     fontWeight: FontWeight.bold,
                                   ),
                                 ),
