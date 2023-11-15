@@ -56,7 +56,7 @@ class MyHomePage extends StatelessWidget {
 
                             // Limit the number of lines
                             final int maxLines =
-                                10; // Set the desired number of lines
+                                8; // Set the desired number of lines
                             String limitedContent =
                                 _limitLines(cleanExcerpt, maxLines);
 
